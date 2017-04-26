@@ -1,0 +1,35 @@
+2017-04-24 14:15:57,623 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -a s0017140910trial -u s0017140910 -h hanatrial.ondemand.com -i Default
+2017-04-24 14:15:58,461 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [open-db-tunnel]
+2017-04-24 14:15:58,544 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: No SDK status file for your configuration was found. A version validity check will be performed.
+2017-04-24 14:15:58,545 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: Currently running SDK version validity check for user SDK version: 1.125.24.2, landscape: hanatrial.ondemand.com and runtime: neo-java-web
+2017-04-24 14:15:59,279 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: There is no tools page available on host hanatrial.ondemand.com. The default tools page on host hana.ondemand.com will be used instead.
+2017-04-24 14:15:59,282 INFO  [pool-3-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 14:15:59,283 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [open-db-tunnel] init() finished for [822] ms
+2017-04-24 14:16:21,353 INFO  [main] com.sap.core.tunnelcommands.framework.executor.CommandTunnelRequestExecutor: CommandTunnelRequestExecutor.executeRequest() called for command [open-db-tunnel] (version: 0.55.0)
+2017-04-24 14:16:22,599 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: A problem occurred.
+2017-04-24 14:16:22,600 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: request URI: https://services.hanatrial.ondemand.com/services/v1/instances/s0017140910trial/persistence/v3/dbtunnel/schemaId/Default
+2017-04-24 14:16:22,600 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: statusCode: 404 Not Found
+2017-04-24 14:16:22,601 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: contentType: text/plain
+2017-04-24 14:16:22,604 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: content: Database or schema 'Default' not found.
+2017-04-24 14:16:22,615 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [open-db-tunnel] cleanup() finished for [8] ms
+2017-04-24 14:16:22,627 FATAL [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: (!) ERROR: A problem occurred.
+Database or schema 'Default' not found.
+com.sap.jpaas.infrastructure.console.exception.CommandException: A problem occurred.
+Database or schema 'Default' not found.
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.throwCommandExceptionWithContentInfoAndLog(DefaultResponseConsumingStrategy.java:90)
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.throwCommandExceptionWithContentInfoAndLog(DefaultResponseConsumingStrategy.java:54)
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.throwCommandExceptionWithContentInfoAndLog(DefaultResponseConsumingStrategy.java:49)
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.consume(DefaultResponseConsumingStrategy.java:43)
+	at com.sap.core.tunnelcommands.framework.executor.JsonConsumingStrategy.consume(JsonConsumingStrategy.java:31)
+	at com.sap.core.persistence.commands.tunnel.api.OpenDbTunnelConsumer.consume(OpenDbTunnelConsumer.java:37)
+	at com.sap.core.tunnelcommands.framework.executor.CommandTunnelRequestExecutor.executeRequest(CommandTunnelRequestExecutor.java:89)
+	at com.sap.core.tunnelcommands.framework.executor.CommandTunnelRequestExecutor.executeRequest(CommandTunnelRequestExecutor.java:39)
+	at com.sap.core.persistence.commands.tunnel.api.CommandTunnelHandler.performOpenTunnelRequest(CommandTunnelHandler.java:263)
+	at com.sap.core.persistence.commands.tunnel.api.CommandTunnelHandler.openTunnel(CommandTunnelHandler.java:133)
+	at com.sap.core.persistence.commands.tunnel.OpenDbTunnelCommand.openTunnelInShellProcess(OpenDbTunnelCommand.java:197)
+	at com.sap.core.persistence.commands.tunnel.OpenDbTunnelCommand.run(OpenDbTunnelCommand.java:135)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:183)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)

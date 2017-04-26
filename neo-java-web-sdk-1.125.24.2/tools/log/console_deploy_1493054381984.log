@@ -1,0 +1,28 @@
+2017-04-24 18:19:42,179 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hanatrial.ondemand.com -a s0017140910trial -b helloworldmaven -u s0017140910 -s hello-world.war
+2017-04-24 18:19:43,043 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [deploy]
+2017-04-24 18:19:43,127 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: No SDK status file for your configuration was found. A version validity check will be performed.
+2017-04-24 18:19:43,127 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: Currently running SDK version validity check for user SDK version: 1.125.24.2, landscape: hanatrial.ondemand.com and runtime: neo-java-web
+2017-04-24 18:19:43,839 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: There is no tools page available on host hanatrial.ondemand.com. The default tools page on host hana.ondemand.com will be used instead.
+2017-04-24 18:19:43,842 INFO  [pool-3-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 18:19:43,844 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] init() finished for [801] ms
+2017-04-24 18:19:59,210 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment started for [s0017140910trial/helloworldmaven/web] with descriptor [Descriptor{attributes={update_sites=hello-world.war, iu_version=0.0.0, runtimeId=neo-java-web, runtimeVersion=1, perm_storage_size=10, jpaas_services=["all"], elasticity.data={"minVmCount":1,"maxVmCount":1}, perm_storage_local_path=permanent_storage, perm_storage_mode=none}, services=null, containerType=3}]
+2017-04-24 18:19:59,222 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy started
+2017-04-24 18:19:59,226 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Starting deployment of application [s0017140910trial/helloworldmaven]
+2017-04-24 18:19:59,597 INFO  [main] com.sap.core.deploy.client.publicrest.impl.DeployClient: Deploy with delta option [false]
+2017-04-24 18:19:59,603 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: NOTE: csrfToken init >> Mon Apr 24 18:19:59 BST 2017
+2017-04-24 18:20:00,186 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: csrfToken = [119BC541889F9A607DE8628FDEE04B1C]
+2017-04-24 18:20:00,462 ERROR [main] com.sap.core.deploy.client.impl.requests.BasicRequest: Exception occured: {"code":"ccb28fc4-b348-4167-8cb7-b864e299d4c6","description":"Application helloworldmaven does not exist. Please create it"}
+2017-04-24 18:20:00,465 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: UpdateApplication request failed with response code 404 and error message [Application helloworldmaven does not exist. Please create it]. The application s0017140910trial/helloworldmaven may not exist (see NGPBUG-16650). Will re-attempt deployment with CreateApplication request
+2017-04-24 18:20:00,829 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: Retry request executed successfully
+2017-04-24 18:20:00,849 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload started
+2017-04-24 18:20:00,851 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 96
+2017-04-24 18:20:00,852 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 100
+2017-04-24 18:20:01,043 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload finished. Details: Uploaded 4.2 KB in 0.1 s Speed: 22 KB/s
+2017-04-24 18:20:01,047 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Processing started
+2017-04-24 18:20:07,322 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Processing finished. Details: Processing completed in 6.2 s
+2017-04-24 18:20:07,326 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy finished. Success: true
+2017-04-24 18:20:07,326 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Deployment operation of application [s0017140910trial/helloworldmaven] finished for [8104] ms
+2017-04-24 18:20:07,338 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment completed successfully
+2017-04-24 18:20:07,339 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] run() finished for [23495] ms
+2017-04-24 18:20:07,341 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] cleanup() finished for [2] ms
+2017-04-24 18:20:07,341 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] finished successfully for [24298] ms

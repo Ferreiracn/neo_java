@@ -1,0 +1,33 @@
+2017-04-24 16:52:53,896 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hana.ondemand.com -a s017169387trial -b mytestapp -u s0017169387 -s persistence-with-jdbc.warr
+2017-04-24 16:52:54,728 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [deploy]
+2017-04-24 16:52:54,812 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 16:52:54,815 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] init() finished for [87] ms
+2017-04-24 16:52:54,828 WARN  [main] com.sap.core.deploy.client.utils.DeployClientUtils: Malformed URL [persistence-with-jdbc.warr]
+java.net.MalformedURLException: no protocol: persistence-with-jdbc.warr
+	at java.net.URL.<init>(URL.java:593)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sap.core.deploy.client.utils.DeployClientUtils.escapeURIString(DeployClientUtils.java:291)
+	at com.sap.core.deploy.client.utils.DeployClientUtils.getLocalFile(DeployClientUtils.java:262)
+	at com.sap.core.deploy.client.utils.DeployClientUtils.detectLocalWarFilesAndBundles(DeployClientUtils.java:390)
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deploy(DeployHelper.java:119)
+	at com.sap.core.deploy.client.cmd.commands.DeployCommand.run(DeployCommand.java:55)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:183)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
+2017-04-24 16:52:54,831 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] cleanup() finished for [0] ms
+2017-04-24 16:52:54,833 FATAL [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: (!) ERROR: Invalid value of parameter --source; persistence-with-jdbc.warr was not found
+com.sap.jpaas.infrastructure.console.exception.CommandException: Invalid value of parameter --source
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deploy(DeployHelper.java:124)
+	at com.sap.core.deploy.client.cmd.commands.DeployCommand.run(DeployCommand.java:55)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:183)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
+Caused by: java.lang.IllegalArgumentException: persistence-with-jdbc.warr was not found
+	at com.sap.core.deploy.client.utils.DeployClientUtils.detectLocalWarFilesAndBundles(DeployClientUtils.java:404)
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deploy(DeployHelper.java:119)
+	... 6 more

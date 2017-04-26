@@ -1,0 +1,1 @@
+2017-04-24 16:02:45,286 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -dbms -a s0017140910trial -h hana.ondemand.com -u S0017140910

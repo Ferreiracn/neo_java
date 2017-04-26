@@ -1,0 +1,38 @@
+2017-04-24 17:23:16,959 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hanatrial.ondemand.com -a s0017140910trial -b mytestapp -u s0017140910 -s persistence-with-jdbc.war
+2017-04-24 17:23:17,806 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [deploy]
+2017-04-24 17:23:17,893 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: No SDK status file for your configuration was found. A version validity check will be performed.
+2017-04-24 17:23:17,893 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: Currently running SDK version validity check for user SDK version: 1.125.24.2, landscape: hanatrial.ondemand.com and runtime: neo-java-web
+2017-04-24 17:23:19,171 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: There is no tools page available on host hanatrial.ondemand.com. The default tools page on host hana.ondemand.com will be used instead.
+2017-04-24 17:23:19,173 INFO  [pool-3-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 17:23:19,176 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] init() finished for [1370] ms
+2017-04-24 17:23:44,210 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment started for [s0017140910trial/mytestapp/web] with descriptor [Descriptor{attributes={update_sites=persistence-with-jdbc.war, iu_version=0.0.0, runtimeId=neo-java-web, runtimeVersion=1, perm_storage_size=10, jpaas_services=["all"], elasticity.data={"minVmCount":1,"maxVmCount":1}, perm_storage_local_path=permanent_storage, perm_storage_mode=none}, services=null, containerType=3}]
+2017-04-24 17:23:44,220 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy started
+2017-04-24 17:23:44,223 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Starting deployment of application [s0017140910trial/mytestapp]
+2017-04-24 17:23:44,589 INFO  [main] com.sap.core.deploy.client.publicrest.impl.DeployClient: Deploy with delta option [false]
+2017-04-24 17:23:44,592 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: NOTE: csrfToken init >> Mon Apr 24 17:23:44 BST 2017
+2017-04-24 17:23:45,155 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: csrfToken = [B8267C710D7F649B7FCCA607BEE900EE]
+2017-04-24 17:23:45,572 ERROR [main] com.sap.core.deploy.client.impl.requests.BasicRequest: Exception occured: {"code":"c88e9b70-a74c-4722-bbdd-dfbd8b92cdbb","description":"Application mytestapp does not exist. Please create it"}
+2017-04-24 17:23:45,574 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: UpdateApplication request failed with response code 404 and error message [Application mytestapp does not exist. Please create it]. The application s0017140910trial/mytestapp may not exist (see NGPBUG-16650). Will re-attempt deployment with CreateApplication request
+2017-04-24 17:23:45,790 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: Retry request executed successfully
+2017-04-24 17:23:45,813 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload started
+2017-04-24 17:23:45,814 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 8
+2017-04-24 17:23:45,815 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 17
+2017-04-24 17:23:45,816 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 25
+2017-04-24 17:23:45,817 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 33
+2017-04-24 17:23:45,817 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 42
+2017-04-24 17:23:45,818 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 50
+2017-04-24 17:23:45,819 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 58
+2017-04-24 17:23:45,819 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 67
+2017-04-24 17:23:45,820 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 75
+2017-04-24 17:23:45,820 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 83
+2017-04-24 17:23:45,821 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 92
+2017-04-24 17:23:45,822 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 100
+2017-04-24 17:23:46,123 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload finished. Details: Uploaded 49.1 KB in 0.3 s Speed: 158 KB/s
+2017-04-24 17:23:46,128 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Processing started
+2017-04-24 17:23:52,413 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Processing finished. Details: Processing completed in 6.2 s
+2017-04-24 17:23:52,416 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy finished. Success: true
+2017-04-24 17:23:52,416 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Deployment operation of application [s0017140910trial/mytestapp] finished for [8196] ms
+2017-04-24 17:23:52,428 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment completed successfully
+2017-04-24 17:23:52,429 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] run() finished for [33253] ms
+2017-04-24 17:23:52,431 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] cleanup() finished for [2] ms
+2017-04-24 17:23:52,431 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] finished successfully for [34625] ms

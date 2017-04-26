@@ -1,0 +1,1 @@
+2017-04-24 16:54:58,194 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hana.ondemand.com -a S017169387trial -b mytestapp -u s0017169387 -s persistence-with-jdbc.war

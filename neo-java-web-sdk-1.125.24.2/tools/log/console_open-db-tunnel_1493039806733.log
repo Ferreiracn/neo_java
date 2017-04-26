@@ -1,0 +1,3 @@
+2017-04-24 14:16:46,921 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -a s0017140910trial -u s0017140910 -h hanatrial.ondemand.com
+2017-04-24 14:16:47,757 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [open-db-tunnel]
+2017-04-24 14:16:47,757 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [open-db-tunnel] cleanup() finished for [0] ms

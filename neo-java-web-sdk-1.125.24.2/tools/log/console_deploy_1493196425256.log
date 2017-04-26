@@ -1,0 +1,41 @@
+2017-04-26 09:47:05,502 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hanatrial.ondemand.com -a s0017140910trial -b exploreui5 -u s0017140910 -s explore-ui5.war
+2017-04-26 09:47:06,370 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [deploy]
+2017-04-26 09:47:06,452 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: No SDK status file for your configuration was found. A version validity check will be performed.
+2017-04-26 09:47:06,453 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: Currently running SDK version validity check for user SDK version: 1.125.24.2, landscape: hanatrial.ondemand.com and runtime: neo-java-web
+2017-04-26 09:47:07,685 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: There is no tools page available on host hanatrial.ondemand.com. The default tools page on host hana.ondemand.com will be used instead.
+2017-04-26 09:47:07,687 INFO  [pool-3-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-26 09:47:07,690 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] init() finished for [1320] ms
+2017-04-26 09:47:39,087 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment started for [s0017140910trial/exploreui5/web] with descriptor [Descriptor{attributes={update_sites=explore-ui5.war, iu_version=0.0.0, runtimeId=neo-java-web, runtimeVersion=1, perm_storage_size=10, jpaas_services=["all"], elasticity.data={"minVmCount":1,"maxVmCount":1}, perm_storage_local_path=permanent_storage, perm_storage_mode=none}, services=null, containerType=3}]
+2017-04-26 09:47:39,094 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy started
+2017-04-26 09:47:39,095 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Starting deployment of application [s0017140910trial/exploreui5]
+2017-04-26 09:47:39,503 INFO  [main] com.sap.core.deploy.client.publicrest.impl.DeployClient: Deploy with delta option [false]
+2017-04-26 09:47:39,505 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: NOTE: csrfToken init >> Wed Apr 26 09:47:39 BST 2017
+2017-04-26 09:47:40,087 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: csrfToken = [F16DF809BC11C03DB3EE04792DB0DFB3]
+2017-04-26 09:47:40,350 ERROR [main] com.sap.core.deploy.client.impl.requests.BasicRequest: Exception occured: {"code":"7f1fcf47-1e16-463e-afa8-a0687b329a95","description":"Application exploreui5 does not exist. Please create it"}
+2017-04-26 09:47:40,353 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: UpdateApplication request failed with response code 404 and error message [Application exploreui5 does not exist. Please create it]. The application s0017140910trial/exploreui5 may not exist (see NGPBUG-16650). Will re-attempt deployment with CreateApplication request
+2017-04-26 09:47:40,682 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: Retry request executed successfully
+2017-04-26 09:47:40,706 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload started
+2017-04-26 09:47:40,708 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 7
+2017-04-26 09:47:40,709 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 14
+2017-04-26 09:47:40,709 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 20
+2017-04-26 09:47:40,710 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 27
+2017-04-26 09:47:40,710 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 34
+2017-04-26 09:47:40,711 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 41
+2017-04-26 09:47:40,712 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 48
+2017-04-26 09:47:40,712 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 54
+2017-04-26 09:47:40,713 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 61
+2017-04-26 09:47:40,714 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 68
+2017-04-26 09:47:40,714 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 75
+2017-04-26 09:47:40,715 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 82
+2017-04-26 09:47:40,716 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 88
+2017-04-26 09:47:40,716 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 95
+2017-04-26 09:47:40,717 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload progressed. Percents: 100
+2017-04-26 09:47:41,037 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Upload finished. Details: Uploaded 60.1 KB in 0.3 s Speed: 182 KB/s
+2017-04-26 09:47:41,042 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Processing started
+2017-04-26 09:47:47,314 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Processing finished. Details: Processing completed in 6.2 s
+2017-04-26 09:47:47,315 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy finished. Success: true
+2017-04-26 09:47:47,316 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Deployment operation of application [s0017140910trial/exploreui5] finished for [8225] ms
+2017-04-26 09:47:47,332 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment completed successfully
+2017-04-26 09:47:47,332 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] run() finished for [39642] ms
+2017-04-26 09:47:47,333 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] cleanup() finished for [1] ms
+2017-04-26 09:47:47,333 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] finished successfully for [40963] ms

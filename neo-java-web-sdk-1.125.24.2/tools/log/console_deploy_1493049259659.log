@@ -1,0 +1,30 @@
+2017-04-24 16:54:19,852 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hana.ondemand.com -a s017169387 -b mytestapp -u s0017169387 -s persistence-with-jdbc.war
+2017-04-24 16:54:20,690 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [deploy]
+2017-04-24 16:54:20,775 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 16:54:20,778 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] init() finished for [88] ms
+2017-04-24 16:54:34,501 INFO  [main] com.sap.core.deploy.client.cmd.helpers.DeployHelper: Deployment started for [s017169387/mytestapp/web] with descriptor [Descriptor{attributes={update_sites=persistence-with-jdbc.war, iu_version=0.0.0, runtimeId=neo-java-web, runtimeVersion=1, perm_storage_size=10, jpaas_services=["all"], elasticity.data={"minVmCount":1,"maxVmCount":1}, perm_storage_local_path=permanent_storage, perm_storage_mode=none}, services=null, containerType=3}]
+2017-04-24 16:54:34,508 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy started
+2017-04-24 16:54:34,509 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Starting deployment of application [s017169387/mytestapp]
+2017-04-24 16:54:34,927 INFO  [main] com.sap.core.deploy.client.publicrest.impl.DeployClient: Deploy with delta option [false]
+2017-04-24 16:54:34,933 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: NOTE: csrfToken init >> Mon Apr 24 16:54:34 BST 2017
+2017-04-24 16:54:35,467 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: csrfToken = [F2C6E3E84BA765F9CEDAC4B3344C175A]
+2017-04-24 16:54:35,630 ERROR [main] com.sap.core.deploy.client.impl.requests.BasicRequest: Exception occured: {"code":"b1426fed-1f34-41ac-abde-caecbd793dc3","description":"Account s017169387 does not exist"}
+2017-04-24 16:54:35,633 INFO  [main] com.sap.core.deploy.commons.log.StringFormatLoggerWrapper: UpdateApplication request failed with response code 404 and error message [Account s017169387 does not exist]. The application s017169387/mytestapp may not exist (see NGPBUG-16650). Will re-attempt deployment with CreateApplication request
+2017-04-24 16:54:35,697 ERROR [main] com.sap.core.deploy.client.impl.requests.BasicRequest: Exception occured: {"code":"ce046582-c89a-4fe5-80e8-7ec28b8f1e17","description":"Account s017169387 does not exist"}
+2017-04-24 16:54:35,698 INFO  [main] com.sap.core.deploy.client.impl.DeployFeedbackHelper: Deploy finished. Success: false
+2017-04-24 16:54:35,699 INFO  [main] com.sap.core.deploy.client.impl.DeployerImpl: Deployment operation of application [s017169387/mytestapp] finished for [1192] ms
+2017-04-24 16:54:35,706 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] cleanup() finished for [2] ms
+2017-04-24 16:54:35,722 FATAL [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: (!) ERROR: Account s017169387 does not exist
+
+com.sap.jpaas.infrastructure.console.exception.CommandException: Account s017169387 does not exist
+
+	at com.sap.core.deploy.client.cmd.util.DeployDumpHelper.produceException(DeployDumpHelper.java:356)
+	at com.sap.core.deploy.client.cmd.util.DeployDumpHelper.printAndCheckDeployResult(DeployDumpHelper.java:382)
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deployOperation(DeployHelper.java:224)
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deploy(DeployHelper.java:183)
+	at com.sap.core.deploy.client.cmd.commands.DeployCommand.run(DeployCommand.java:55)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:183)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)

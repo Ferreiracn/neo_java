@@ -1,0 +1,14 @@
+2017-04-24 17:34:41,124 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   samples/deploy_war/example_war.properties
+2017-04-24 17:34:41,955 INFO  [main] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [samples/deploy_war/example_war.properties]
+2017-04-24 17:34:41,960 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [start]
+2017-04-24 17:34:42,043 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: No SDK status file for your configuration was found. A version validity check will be performed.
+2017-04-24 17:34:42,044 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: Currently running SDK version validity check for user SDK version: 1.125.24.2, landscape: hanatrial.ondemand.com and runtime: neo-java-web
+2017-04-24 17:34:42,735 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: There is no tools page available on host hanatrial.ondemand.com. The default tools page on host hana.ondemand.com will be used instead.
+2017-04-24 17:34:42,738 INFO  [pool-3-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 17:34:42,740 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [start] init() finished for [780] ms
+2017-04-24 17:35:04,985 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: Update application state of application s0017140910trial/helloworld to STARTED
+2017-04-24 17:35:04,992 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: NOTE: csrfToken init >> Mon Apr 24 17:35:04 BST 2017
+2017-04-24 17:35:05,049 INFO  [main] com.sap.core.deploy.client.publicrest.impl.BasicClient: csrfToken = [71F138039B760977A9EEBED07FB5C359]
+2017-04-24 17:35:09,082 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [start] run() finished for [26342] ms
+2017-04-24 17:35:09,083 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [start] cleanup() finished for [1] ms
+2017-04-24 17:35:09,083 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [start] finished successfully for [27123] ms

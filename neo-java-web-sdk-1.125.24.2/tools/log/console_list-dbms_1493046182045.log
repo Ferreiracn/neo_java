@@ -1,0 +1,27 @@
+2017-04-24 16:03:02,236 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -a s0017140910trial -h hana.ondemand.com -u S0017140910
+2017-04-24 16:03:03,073 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [list-dbms]
+2017-04-24 16:03:03,156 INFO  [pool-2-thread-1] com.sap.jpaas.infrastructure.console.PropertyFileProvider: Loaded properties file [C:\Users\ANA~1.COS\AppData\Local\Temp\sdkcheck.hana.ondemand.com.neo-java-web.1.125.24.2.tmp]
+2017-04-24 16:03:03,159 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [list-dbms] init() finished for [86] ms
+2017-04-24 16:03:03,164 INFO  [main] com.sap.core.tunnelcommands.framework.executor.CommandTunnelRequestExecutor: CommandTunnelRequestExecutor.executeRequest() called for command [list-dbms] (version: 0.55.0)
+2017-04-24 16:03:27,843 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: Authorization error - the execution was rejected.
+2017-04-24 16:03:27,844 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: request URI: https://services.hana.ondemand.com/services/v1/instances/s0017140910trial/persistence/v1/dbms/
+2017-04-24 16:03:27,844 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: statusCode: 403 Forbidden
+2017-04-24 16:03:27,844 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: contentType: null
+2017-04-24 16:03:27,845 ERROR [main] com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy: content: null
+2017-04-24 16:03:27,847 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [list-dbms] cleanup() finished for [0] ms
+2017-04-24 16:03:27,855 FATAL [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: (!) ERROR: Authorization error - the execution was rejected.
+com.sap.jpaas.infrastructure.console.exception.CommandException: Authorization error - the execution was rejected.
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.throwCommandExceptionWithContentInfoAndLog(DefaultResponseConsumingStrategy.java:90)
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.throwCommandExceptionWithContentInfoAndLog(DefaultResponseConsumingStrategy.java:54)
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.throwCommandExceptionWithContentInfoAndLog(DefaultResponseConsumingStrategy.java:49)
+	at com.sap.core.tunnelcommands.framework.executor.DefaultResponseConsumingStrategy.consume(DefaultResponseConsumingStrategy.java:43)
+	at com.sap.core.tunnelcommands.framework.executor.JsonConsumingStrategy.consume(JsonConsumingStrategy.java:31)
+	at com.sap.core.persistence.commands.ListDbms$ListDbmsConsumer.consume(ListDbms.java:44)
+	at com.sap.core.tunnelcommands.framework.executor.CommandTunnelRequestExecutor.executeRequest(CommandTunnelRequestExecutor.java:89)
+	at com.sap.core.tunnelcommands.framework.executor.CommandTunnelRequestExecutor.executeRequest(CommandTunnelRequestExecutor.java:39)
+	at com.sap.core.persistence.commands.ListDbms.run(ListDbms.java:109)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:183)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
