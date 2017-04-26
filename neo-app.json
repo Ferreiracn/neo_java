@@ -1,0 +1,41 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "logoutPage": "/webapp/logout.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/services/userapi",
+      "target": {
+        "type": "service",
+        "name": "userapi"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/acn/logistics/purchasingplancockpit/d",
+      "target": {
+        "type": "destination",
+        "name": "I4Q_HANA_PPC"
+      },
+      "description": "Purchase Plan Cockpit HANA Database"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}

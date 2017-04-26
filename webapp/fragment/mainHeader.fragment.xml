@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Panel>
+		<content>
+			<HBox class="greenBackground" alignItems="Center" justifyContent="SpaceBetween"> 
+				<Image src="contents/accLogo.png" class="sapUiSmallMarginBegin sapUiTinyMargin  xs_acclogo"/> 
+				<HBox alignItems="Center">
+					<!--<Button press="onUserSettings" class="sapUiSmallMarginEnd userLogo" icon="sap-icon://costumer"></Button>-->
+					<Text text="{i18n>loginWelcomeMsg} {userapi>/displayName}" class="userName sapUiMediumMarginEnd"/>
+					<Button press="logUserOut" class="sapUiSmallMarginEnd logButton" icon="sap-icon://log"></Button>
+				</HBox>		
+			</HBox>
+		</content>
+	</Panel>
+</core:FragmentDefinition>

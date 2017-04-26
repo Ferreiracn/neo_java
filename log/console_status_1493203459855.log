@@ -1,0 +1,12 @@
+2017-04-26 11:44:20,042 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   PurchasingPlanCockpit.war
+2017-04-26 11:44:20,964 FATAL [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: (!) ERROR; Malformed \uxxxx encoding.
+com.sap.jpaas.infrastructure.console.exception.CommandException
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:186)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
+Caused by: java.lang.IllegalArgumentException: Malformed \uxxxx encoding.
+	at java.util.Properties.loadConvert(Properties.java:574)
+	at java.util.Properties.load0(Properties.java:390)
+	at java.util.Properties.load(Properties.java:317)
+	at com.sap.jpaas.infrastructure.console.PropertyFileProvider.<init>(PropertyFileProvider.java:38)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:175)
+	... 1 more

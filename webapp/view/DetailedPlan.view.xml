@@ -1,0 +1,188 @@
+<mvc:View 
+	controllerName="acn.logistics.PurchasingPlanCockpit.controller.DetailedPlan" 
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core" 
+	displayBlock="true" 
+	xmlns:t="sap.ui.table" 
+	xmlns="sap.m" 
+	xmlns:m="sap.m">
+	
+	<Page showHeader="false">
+		<content>
+			<mvc:Fragment fragmentName="acn.logistics.PurchasingPlanCockpit.fragment.mainHeader" type="XML"></mvc:Fragment>
+			<!-- Nav Back and Plan Name -->
+			<HBox alignItems="Center" justifyContent="SpaceBetween" class="whiteBackground">
+				<HBox alignItems="Center">
+					<Button press="onNavBack" class="sapUiTinyMargin roundButton" icon="sap-icon://navigation-left-arrow"></Button>
+					<VBox justifyContent="Center">
+						<Text text="{PlanModel>/description}" class="titlePlan"/>
+						<Text text="{path:'PlanModel>/dueDate', type: 'sap.ui.model.type.Date' , formatOptions: { style: 'medium' }}"/>
+					</VBox>
+				</HBox>
+				<!--<SegmentedButton selectedKey="MaterialCat" width="20rem" class="sapUiSmallMargin RoundBoxes">-->
+				<!--		<items>-->
+				<!--			<SegmentedButtonItem text="Cost Object" />-->
+				<!--			<SegmentedButtonItem text="Material Category" key="MaterialCat" />-->
+				<!--		</items>-->
+				<!--</SegmentedButton>-->
+			</HBox>
+			<!-- Total Cost and Info -->
+			<HBox alignItems="Center" justifyContent="SpaceBetween" class="greyBackground headerBorder">
+				<VBox class="sapUiSmallMargin">
+					<Text text="{i18n>totalCost}" class="smallText"/>
+					<Text text="{parts:[ {path: 'PlanModel>/totalCost'}, {path: 'PlanModel>/currency'} ], type: 'sap.ui.model.type.Currency' , formatOptions: { 	showMeasure: true,
+					currencyCode: false,
+					currencyContext: 'standard'}}" id="totalCost" class="totalCost"/>
+				</VBox>
+				<HBox>
+					<HBox height="3.75em" justifyContent="SpaceAround" alignItems="Center" class="sapUiSmallMarginBeginEnd whiteBackground boxBorder RoundBoxes">
+						<HBox class="sapUiTinyMargin">
+							<mvc:Icon visible="{ path: 'PlanModel>/percentageLastYear', formatter: 'formatters.Formatter.formatIcon2'}" id="trend_down_1" src="sap-icon://trend-down" class="greenArrow"></mvc:Icon>
+							<!--<mvc:Icon visible="{ path: 'PlanModel>/percentageLastYear', formatter: 'formatters.Formatter.formatIcon5'}" id="trend_equal_1" src="sap-icon://less" class="black"></mvc:Icon>
+							<mvc:Icon visible="{ path: 'PlanModel>/percentageLastYear', formatter: 'formatters.Formatter.formatIcon6'}" id="trend_up_1" src="sap-icon://trend-up" class="redArrow"></mvc:Icon>-->
+						</HBox>
+						<HBox justifyContent="Center" width="3em" alignItems="Center">
+							<Text text="{PlanModel>/percentageLastYear}%" id="percentage_1" class="smallText"/>
+						</HBox>
+						<HBox class="sapUiTinyMargin" alignItems="Center">
+							<VBox>
+								<Text text="{i18n>lastyear}" class="smallText"/>
+								<Text text="{parts:[ {path: 'PlanModel>/totalCostLastYear'}, {path: 'PlanModel>/currency'} ], type: 'sap.ui.model.type.Currency' , formatOptions: { 	showMeasure: true,
+									currencyCode: false,
+									currencyContext: 'standard'}}" id="totalCostLY" class="totalCost2"/>
+							</VBox>
+						</HBox>
+					</HBox>
+					<HBox height="3.75em" justifyContent="SpaceAround" alignItems="Center" class="sapUiSmallMarginBeginEnd whiteBackground boxBorder RoundBoxes">
+						<HBox class="sapUiTinyMargin">	
+							<mvc:Icon visible="{ path: 'PlanModel>/percentage3YearAvg', formatter: 'formatters.Formatter.formatIcon'}" id="trend_down_2" src="sap-icon://trend-down" class="greenArrow"></mvc:Icon>
+						</HBox>
+						<HBox justifyContent="Center" alignItems="Center" width="3em">
+							<Text text="{PlanModel>/percentage3YearAvg}%" id="percentage_2" class="smallText"/>
+						</HBox>
+						<HBox >
+							<VBox class="sapUiTinyMargin">
+								<Text text="{i18n>3yearavg}" class="smallText"/>
+								<Text text="{parts:[ {path: 'PlanModel>/totalCostAvg'}, {path: 'PlanModel>/currency'} ], type: 'sap.ui.model.type.Currency' , formatOptions: { 	showMeasure: true,
+									currencyCode: false,
+									currencyContext: 'standard'}}" id="totalCost3Avg" class="totalCost2"/>
+							</VBox>
+						</HBox>
+					</HBox>
+				</HBox>
+			</HBox>
+			
+			<!-- Search and add button -->
+			<HBox alignItems="Center" justifyContent="SpaceBetween" class="whiteBackground">
+				<SearchField id="searchField" search="search2"  liveChange="onSearch"  class="RoundBoxes sapUiTinyMargin Dropdown" width="30rem"/>
+				<HBox>
+					<Select selectedKey="{PlanModel>/planningMethod}"  change="onTopDropdownChange" id="combo1" items="{methodsModel>/methods}"
+							class="RoundBoxes Dropdown sapUiTinyMargin">
+						<mvc:Item key="{methodsModel>key}" text="{methodsModel>text}" class="dropdownItem"/>
+					</Select>
+					<!--<Button text="{i18n>addNewMaterial}" width="9rem" class="BWButton sapUiSmallMarginBeginEnd" press="onAddrow"/>-->
+					<!--<Button text="{i18n>editMaterial}"  width="9rem" class="BWButton sapUiSmallMarginEnd" press="onExpandFirstLevel"/>-->
+				</HBox>
+			</HBox>
+			<!-- TreeTable Binding is being made in controller-->
+			<HBox height="65%">
+				<t:TreeTable 
+					id="TreeTableBasic" 
+					selectionMode="None" 
+					expandFirstLevel="false" 
+					enableSelectAll="false"
+					threshold="200"
+					visibleRowCountMode="Auto"
+					toggleOpenState="onToggleOpenState">
+					<t:columns >
+						<t:Column width="23%">
+							<Label text="{i18n>description}" class="tableSpacer"/>
+							<t:template  >
+								<Text text="{ parts:[ {path: 'tableModel>description'}, {path: 'tableModel>quantityYearSum3'} ], formatter: 'formatters.Formatter.formatRow'}" />
+							</t:template>
+						</t:Column>
+						<t:Column width="7%" hAlign="Right">
+							<m:Label text="{i18n>quantityN3}" width="100%"/>
+							<t:template textAlign="Right">
+								<Text text="{tableModel>quantityYearSum3}" textAlign="Right"/>
+							</t:template>
+						</t:Column >
+						<t:Column width="7%" hAlign="Right">
+							<m:Label text="{i18n>quantityN2}" width="100%"/>
+							<t:template alignItems="Right">
+								<Text text="{tableModel>quantityYearSum2}" textAlign="Right"/>
+							</t:template>
+						</t:Column >
+						<t:Column width="7%" hAlign="Right">
+							<m:Label text="{i18n>quantityN1}" width="100%"/>
+							<t:template alignItems="Right">
+								<Text text="{tableModel>quantityYearSum1}" textAlign="Right"/>
+							</t:template>
+						</t:Column >
+						<t:Column width="12%">
+							<Label text="{i18n>method}"/>
+							<t:template textAlign="Right" alignItems="Right">
+								<Select  width="100%" id="combo2" change="onTableDropdownChange" items="{methodsModel>/methods}" selectedKey="{tableModel>planningMethod}"
+									class="RoundBoxes Dropdown">
+									<items templateShareable="true">
+										<mvc:Item key="{methodsModel>key}" text="{methodsModel>text}" class="dropdownItem"/>
+									</items>
+								</Select>
+							</t:template>
+						</t:Column>
+						
+						<t:Column hAlign="Right" width="7%">
+							<Label text="{i18n>quantity}" id="Quantidade" width="100%"/>
+							<t:template textAlign="Right">
+								<HBox justifyContent="End">
+									<Text text="{tableModel>plannedQuantity}" textAlign="Right"
+										visible="{= ${tableModel>planningMethod} !== 'MNL' || (( ${tableModel>quantityYearSum3} === undefined) &amp;&amp; ( ${tableModel>planningMethod} === 'MNL')) }"/>
+										
+									<!--if Material Group-->
+									<Input textAlign="Right" id="quantity" class="InputField" change="onChangeManualInput"
+										visible="{= (${tableModel>planningMethod} === 'MNL') &amp;&amp; (${tableModel>quantityYearSum3} !==undefined) }"
+										value="{tableModel>plannedQuantity}" type="Number"/>
+								</HBox>
+							</t:template>
+						</t:Column>
+						<t:Column width="7%" hAlign="Right">
+							<Label text="{i18n>unitMeasure}" width="100%" />
+							<t:template textAlign="Center">
+								<Text text="{tableModel>unitOfMeasure}" textAlign="Center"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="7%" hAlign="Right">
+							<Label text="{i18n>unitPrice}" width="100%"/>
+							<t:template textAlign="Right">
+								<Text text="{parts:[ {path: 'tableModel>unitPrice'}, {path: 'tableModel>currency'} ], type: 'sap.ui.model.type.Currency' , formatOptions: { showMeasure: false }}" textAlign="Right"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="10%" hAlign="Right">
+							<Label text="{i18n>plannedPrice}" width="100%"/>
+							<t:template >
+								<Text text="{parts:[ {path: 'tableModel>plannedPrice'}, {path: 'tableModel>currency'} ], type: 'sap.ui.model.type.Currency' , formatOptions: { showMeasure: false }}"
+								textAlign="Right"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="5%" hAlign="Right">
+							<Label text="{i18n>currency}" width="100%"/>
+							<t:template textAlign="Right">
+								<Text text="{tableModel>currency}" textAlign="Right"/>
+							</t:template>
+						</t:Column>
+					</t:columns>
+				</t:TreeTable>
+			</HBox>
+		</content>
+		
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<!--<Button text="{i18n>save}" id="saveButton" class="onLeftBT"/>-->
+					<Button text="{i18n>export}" id="exportButton" press="onExport" class="onRightBT"/>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

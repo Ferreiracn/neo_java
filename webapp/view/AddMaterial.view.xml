@@ -1,0 +1,118 @@
+<mvc:View 
+xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns="sap.m"
+controllerName="acn.logistics.PurchasingPlanCockpit.controller.AddMaterial" 
+displayBlock="true" 
+xmlns:t="sap.ui.table" 
+xmlns:mvc="sap.ui.core">
+	
+	<Page showHeader="false">
+		<content>
+		<!-- Header -->
+			<HBox class="greenBackground" alignItems="Center"> 			
+				<Image src="contents/accLogo.png" class="sapUiSmallMarginBegin sapUiTinyMargin  xs_acclogo"/> 
+			</HBox>
+			<!-- Nav Back and Plan Name -->
+			<HBox alignItems="Center" class="whiteBackground">
+				<HBox alignItems="Center">
+					<Button press="onNavBack" class="sapUiTinyMargin roundButton" icon="sap-icon://navigation-left-arrow"></Button>
+					<Text text="{i18n>title_AddNewMaterial}" class="titlePlan"/>
+				</HBox>
+			</HBox>
+			
+			<HBox height="80%" justifyContent="SpaceAround" >
+				<VBox width="42%" class="roundButton">
+					<Label text="{i18n>table1Title}" class="sapUiSmallMarginTopBottom" design="Bold"/>
+					<Select
+						width="100%"
+						items="{category>/ProductCategory}" 
+			  			change="onChange"
+			  			id = "comboBox1"
+						class="sapUiSmallMarginBottom"> 
+							<mvc:Item key="{category>id}" text="{category>name}"/>
+					</Select>
+					<SearchField search="onSearch" width="100%"/>
+					<!-- Table 1-->
+					<t:Table	
+								rows="{productList>/List}"
+								columnSelect="onColumnSelect"
+								selectionMode="MultiToggle"
+								visibleRowCount="11"
+								rowSelectionChange="onSelectionChange"
+								id="productList1">
+							<t:columns>
+								<t:Column>               
+									<Label text="{i18n>columnDesignation}" />
+									<t:template>
+										<Text text="{productList>product}"/>
+									</t:template>
+								</t:Column>
+							</t:columns>
+					</t:Table>
+				</VBox>
+				
+				<VBox justifyContent="Center" alignItems="Center">
+						<Button icon="sap-icon://navigation-right-arrow" press="onPressInsert" class="AMArrow"/>
+						<Button icon="sap-icon://navigation-left-arrow" press="onPressDelete" class="AMArrow"/>
+				</VBox>
+
+				<VBox width="42%">
+					<Label text="{i18n>table2Title}" class="sapUiSmallMarginTopBottom" design="Bold"/> 
+					<HBox justifyContent="SpaceBetween" class="sapUiMediumMarginBottom" >
+						<Text text="12.000 {i18n>items}"/>
+						<Text text="{i18n>totalCost_ADD} € 156.405"/>
+					</HBox>
+						<!-- Tables 2-->
+						<t:Table
+								id="productList2"
+								rows="{selectedProduct>/Product}"
+								selectionMode="MultiToggle"
+								visibleRowCount="12">
+							<t:columns>
+								<t:Column width="13.5rem">
+									<Label text="{i18n>columnDesignation}" />
+									<t:template>
+										<Text text="{selectedProduct>product}"/>
+									</t:template>
+								</t:Column>
+							</t:columns>
+								<t:columns>
+								<t:Column width="6rem">
+									<Text text="{i18n>columnPriceUnit}" />
+									<t:template>
+										<Input id="priceUnit" liveChange="handleLiveChangePriceUnit" placeholder="0"></Input>
+									</t:template>
+								</t:Column>
+							</t:columns>
+								<t:columns>
+								<t:Column width="6rem">
+									<Label text="{i18n>columnQuantity}" />
+									<t:template>
+										<Input id="quantity" liveChange="handleLiveChangeQuantity" placeholder="0"></Input>
+									</t:template>
+								</t:Column>
+							</t:columns>
+								<t:columns>
+								<t:Column width="5rem">
+									<Label text="{i18n>subTotal}" />
+									<t:template>
+										<Text text="0"/>
+									</t:template>
+								</t:Column>
+							</t:columns>
+					</t:Table>
+				</VBox>
+			</HBox>
+		</content>
+		<footer>
+			<Bar>
+				<contentLeft>
+					<Button id="footWhiteBorder_cancel" text="{i18n>cancelButton}" class="onLeftBT"/>
+				</contentLeft>
+				<contentRight>
+					<Button text="{i18n>addMaterialButton}" class="onRightBT" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

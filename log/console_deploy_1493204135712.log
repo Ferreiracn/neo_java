@@ -1,0 +1,70 @@
+2017-04-26 11:55:35,911 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Arguments:   -h hanatrial.ondemand.com -a s0017140910trial -b cockpitteste -u s0017140910 -s PurchasingPlanCockpit.war
+2017-04-26 11:55:36,794 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Starting execution of command [deploy]
+2017-04-26 11:55:36,796 ERROR [main] com.sap.jpaas.infrastructure.console.version.VersionUtilities: There is no config file: C:\Users\ana.costeira\Downloads\PurchasingPlanCockpit\.\..\sdk.version
+java.io.FileNotFoundException: C:\Users\ana.costeira\Downloads\PurchasingPlanCockpit\.\..\sdk.version (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at com.sap.jpaas.infrastructure.console.version.VersionUtilities.readSDKVersionProperties(VersionUtilities.java:52)
+	at com.sap.jpaas.infrastructure.console.version.VersionUtilities.<clinit>(VersionUtilities.java:42)
+	at com.sap.jpaas.infrastructure.console.VersionValidityCheckProvider.<init>(VersionValidityCheckProvider.java:40)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.blockingOptimizedCheck(UnsecuredRemoteCommand.java:126)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.performVersionValidityCheck(UnsecuredRemoteCommand.java:76)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.initWithHostOnlyCheck(UnsecuredRemoteCommand.java:69)
+	at com.sap.jpaas.infrastructure.console.command.RemoteCommand.initWithNoPasswordCheck(RemoteCommand.java:46)
+	at com.sap.core.deploy.client.cmd.commands.DeployConsoleCommand.init(DeployConsoleCommand.java:23)
+	at com.sap.core.deploy.client.cmd.commands.DeployRemoteCommand.init(DeployRemoteCommand.java:30)
+	at com.sap.core.deploy.client.cmd.commands.DeployApplicationCommand.init(DeployApplicationCommand.java:24)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:171)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
+2017-04-26 11:55:36,802 ERROR [main] com.sap.jpaas.infrastructure.console.version.VersionUtilities: The runtime type [unknown] or version [unknown] are not correct.
+java.lang.IllegalArgumentException: invalid version "unknown": non-numeric "unknown"
+	at com.sap.core.utils.sdk.status.Version.parseInt(Version.java:95)
+	at com.sap.core.utils.sdk.status.Version.<init>(Version.java:71)
+	at com.sap.jpaas.infrastructure.console.version.VersionUtilities.parseRuntime(VersionUtilities.java:148)
+	at com.sap.jpaas.infrastructure.console.VersionValidityCheckProvider.<init>(VersionValidityCheckProvider.java:41)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.blockingOptimizedCheck(UnsecuredRemoteCommand.java:126)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.performVersionValidityCheck(UnsecuredRemoteCommand.java:76)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.initWithHostOnlyCheck(UnsecuredRemoteCommand.java:69)
+	at com.sap.jpaas.infrastructure.console.command.RemoteCommand.initWithNoPasswordCheck(RemoteCommand.java:46)
+	at com.sap.core.deploy.client.cmd.commands.DeployConsoleCommand.init(DeployConsoleCommand.java:23)
+	at com.sap.core.deploy.client.cmd.commands.DeployRemoteCommand.init(DeployRemoteCommand.java:30)
+	at com.sap.core.deploy.client.cmd.commands.DeployApplicationCommand.init(DeployApplicationCommand.java:24)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:171)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
+Caused by: java.lang.NumberFormatException: For input string: "unknown"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.sap.core.utils.sdk.status.Version.parseInt(Version.java:93)
+	... 15 more
+2017-04-26 11:55:36,804 ERROR [pool-2-thread-1] com.sap.jpaas.infrastructure.console.ConsoleLogger: There was a problem obtaining version or runtime status of your SDK and the status cannot be defined
+2017-04-26 11:55:36,806 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] init() finished for [12] ms
+2017-04-26 11:55:51,066 INFO  [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: Command [deploy] cleanup() finished for [0] ms
+2017-04-26 11:55:51,084 FATAL [main] com.sap.jpaas.infrastructure.console.ConsoleLogger: (!) ERROR: Wrong credentials. Enter correct user name and password. Note that your user will be locked after 5 consecutive failed authentication attempts.
+com.sap.jpaas.infrastructure.console.exception.SecurityException: Wrong credentials. Enter correct user name and password. Note that your user will be locked after 5 consecutive failed authentication attempts.
+	at com.sap.jpaas.infrastructure.console.command.RemoteCommand.getHttpClient(RemoteCommand.java:104)
+	at com.sap.jpaas.infrastructure.console.command.UnsecuredRemoteCommand.getHttpClient(UnsecuredRemoteCommand.java:146)
+	at com.sap.core.deploy.client.cmd.commands.DeployConsoleCommand.getHttpClient(DeployConsoleCommand.java:52)
+	at com.sap.core.deploy.client.cmd.commands.DeployConsoleCommand.askForPasswordAndInitHttpClient(DeployConsoleCommand.java:43)
+	at com.sap.core.deploy.client.cmd.helpers.Helper.initializeDeployClient(Helper.java:47)
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deployOperation(DeployHelper.java:207)
+	at com.sap.core.deploy.client.cmd.helpers.DeployHelper.deploy(DeployHelper.java:183)
+	at com.sap.core.deploy.client.cmd.commands.DeployCommand.run(DeployCommand.java:55)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:183)
+	at com.sap.jpaas.infrastructure.console.CommandManager.run(CommandManager.java:144)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.executeCommand(ConsoleClient.java:238)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.run(ConsoleClient.java:183)
+	at com.sap.jpaas.infrastructure.console.ConsoleClient.main(ConsoleClient.java:79)
+Caused by: com.sap.core.utils.infrastructure.validation.AuthenticationException: Wrong credentials. Enter correct user name and password. Note that your user will be locked after 5 consecutive failed authentication attempts.
+	at com.sap.core.utils.infrastructure.validation.LandscapeHostValidator.validateHttpResponseStatus(LandscapeHostValidator.java:437)
+	at com.sap.core.utils.infrastructure.validation.LandscapeHostValidator.authenticationCheck(LandscapeHostValidator.java:385)
+	at com.sap.core.utils.infrastructure.validation.LandscapeHostValidator.getHttpClient(LandscapeHostValidator.java:352)
+	at com.sap.jpaas.infrastructure.console.command.RemoteCommand.getHttpClient(RemoteCommand.java:98)
+	... 12 more

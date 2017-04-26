@@ -1,0 +1,104 @@
+<mvc:View controllerName="acn.logistics.PurchasingPlanCockpit.controller.ObjectPlanning" xmlns:html="http://www.w3.org/1999/xhtml"
+	 displayBlock="true" xmlns="sap.m" xmlns:mvc="sap.ui.core" >
+	<Page>
+		<Bar>
+			<contentLeft>
+				<Button icon="sap-icon://nav-back"/>
+			</contentLeft>
+		</Bar>
+		<HBox>
+			<VBox class="sapUiMediumMarginBegin">
+				<HBox>
+					<Text text=""/>
+				</HBox>
+				<Text id="xx" text="GRUPO DE MATERIAL"/>
+				<ComboBox  items="{materialModel>/groupmaterial}">
+					<items>
+						<mvc:Item key="{materialModel>key}" text="{materialModel>text}"/>
+					</items>
+				</ComboBox>
+				<HBox>
+					<Text text=""/>
+				</HBox>
+				<VBox>
+					<HBox>
+						<VBox>
+							<Text text="PLANO XXX" id="nomeplano" class="sapUiLargeMarginBegin"/>
+						</VBox>
+						<VBox>
+							<Text text="DD/MM//AAAA" id="dataplano" class="sapUiLargeMarginBegin"/>
+						</VBox>
+					</HBox>
+				</VBox>
+			</VBox>
+		</HBox>
+		<HBox>
+			<Text text=""/>
+		</HBox>
+		<HBox>
+			<Text text=""/>
+		</HBox>
+		<HBox>
+			<Text text=""/>
+		</HBox>
+		<FlexBox height="100px" justifyContent="Center">
+			<items>
+				<VBox>
+					<Label text=" "/>
+					<Text text="XXX Objectos de custo selecionado(s)" id="nobdjectos" class="sapUiLargeMarginBegin"/>
+				</VBox>
+				<VBox>
+					<Label text="Método" class="sapUiLargeMarginBegin"/>
+					<ComboBox items="{methodsModel>/methods}" value="DEFAULT" class="sapUiLargeMarginBegin">
+						<items>
+							<mvc:Item key="{methodsModel>key}" text="{methodsModel>text}"/>
+						</items>
+					</ComboBox>
+				</VBox>
+				<VBox>
+					<Label text=" "/>
+					<SearchField id="nobjectdos3" class="sapUiLargeMarginBegin"/>
+				</VBox>
+			</items>
+		</FlexBox>
+		<HBox>
+			<HBox>
+				<Table>
+					<columns>
+						<Column>
+							<VBox alignItems="Center" justifyContent="Center">
+								<Label text="{i18n>Objecto de Custo}"/>
+							</VBox>
+						</Column>
+						<Column>
+							<VBox alignItems="Center" justifyContent="Center">
+								<Label text="{i18n>Método}"/>
+							</VBox>
+						</Column>
+						<Column >
+							<VBox alignItems="Center" justifyContent="Center">
+								<Label text="{i18n>Responsável}"/>
+							</VBox>
+						</Column>
+						<Column >
+							<VBox alignItems="Center" justifyContent="Center">
+								<Label text="{i18n>Delegar}"/>
+								<Switch state="true" enabled="true"></Switch>
+							</VBox>
+						</Column>
+					</columns>
+				</Table>
+			</HBox>
+		</HBox>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button text="Planear" icon="sap-icon://arrow-right"/>
+				</contentRight>
+				<contentLeft>
+					<Button id="approveButton" text="Cancelar" press="statusApproval"></Button>
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,40 @@
+<mvc:View 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns="sap.m" 
+	controllerName="acn.logistics.PurchasingPlanCockpit.controller.NewPlan"
+	displayBlock="true" 
+	xmlns:mvc="sap.ui.core" 
+	xmlns:l="sap.ui.layout">
+	
+	<Page showHeader="false">
+		<VBox height="100%" class="greenBackground" alignItems="Center" justifyContent="Center">
+			<Image src="contents/accLogo.png" class="m_acclogo greenBackground sapUiSmallMarginTopBottom"/>
+			<VBox class="newPlanWhiteBox shadow" height="28rem" width="40rem" alignItems="Center" justifyContent="Center">
+				<HBox class="sapUiTinyMarginTop" width="38rem">
+					<Button press="onNavBack" class="roundButton" icon="sap-icon://navigation-left-arrow"></Button>
+				</HBox>
+				<HBox alignItems="Center">
+					<mvc:Icon src="sap-icon://business-by-design" class="logo sapUiSmallMarginTopBottm"></mvc:Icon>
+				</HBox>
+				<Label text="{i18n>welcomeMsg}" class="mainMessage sapUiSmallMarginTop" textAlign="Center"/>
+				<Label text="{i18n>warningLabel_newPlan}" class="sapUiSmallMarginBottom" textAlign="Center"/>
+				
+				<HBox alignItems="Center" justifyContent="SpaceBetween" width="30rem">
+					<VBox width="20rem">
+						<Label text="{i18n>planName}" class="labelsNewPlan"/>
+						<Input id="planName" class="inputTextNP" placeholder="{newPlan>planId}"></Input>
+					</VBox>
+					<VBox width="9rem">
+						<Label text="{i18n>dueDate}" class="labelsNewPlan"/>
+						<DatePicker id="dueDate" class="inputTextNP" displayFormat="short"></DatePicker>
+					</VBox>
+				</HBox>
+				<HBox alignItems="Center" justifyContent="Center">
+					<Button id="createNewPlanBT" class="CreateButton sapUiMediumMarginTopBottom" text="{i18n>createPlanBtt}" press="onPressCreate"/>
+				</HBox>
+				<HBox height="2.5rem"></HBox>
+			</VBox>
+		</VBox>
+	</Page>
+	
+</mvc:View>

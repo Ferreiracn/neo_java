@@ -1,0 +1,130 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "acn.logistics.PurchasingPlanCockpit",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": false
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "acn.logistics.PurchasingPlanCockpit.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "acn.logistics.PurchasingPlanCockpit.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "planList",
+					"target": "planList"
+				},	{
+					"pattern": "newPlan",
+					"name": "newPlan",
+					"target": "newPlan"
+				},
+				{
+					"pattern": "detailsPlan/{planDescription}",
+					"name": "detailsPlan",
+					"target": "detailsPlan"
+				},
+				{
+					"pattern": "addMaterial",
+					"name": "addMaterial",
+					"target": "addMaterial"
+				},
+				{
+					"pattern": "ObjectPlanning",
+					"name": "ObjectPlanning",
+					"target": "ObjectPlanning"
+				}
+			],
+			"targets": {
+				"planList": {
+					"viewName": "planList"
+				},
+				"newPlan": {
+					"viewName": "NewPlan"
+				},
+				"detailsPlan": {
+					"viewName": "DetailedPlan"
+				},
+				"addMaterial": {
+					"viewName": "AddMaterial"
+				},
+				"ObjectPlanning": {
+					"viewName": "ObjectPlanning"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "acn.logistics.PurchasingPlanCockpit.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	}
+}

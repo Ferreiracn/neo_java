@@ -1,0 +1,110 @@
+<mvc:View
+	controllerName="acn.logistics.PurchasingPlanCockpit.controller.planList"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<Page showHeader="false">
+		
+		<core:Fragment fragmentName="acn.logistics.PurchasingPlanCockpit.fragment.mainHeader" type="XML"></core:Fragment>
+		
+		<HBox alignItems="Center" justifyContent="SpaceBetween" class="headerBorder" >
+			<Text text="{i18n>myplans}" class="sapUiSmallMargin titlePlan"/>
+			<Button press="addPlan" class="CreateButton sapUiSmallMarginEnd sapUiSmallMarginBottom" text="{i18n>createPlanBtt}"></Button>
+		</HBox>
+
+		<HBox alignItems="Center" justifyContent="Center">
+			<Button press="onLeft" class="sapUiTinyMarginBeginEnd roundButton" icon="sap-icon://navigation-left-arrow"></Button>
+			
+			<VBox width="75%" class="whiteBackground sapUiSmallMargin boxBorder">
+				<HBox>
+					<VBox class="sapUiSmallMargin">
+						<Text text="Plan XXXXX" class="titlePlan"/>
+						<Text text="Due on XXXXX"/>
+					</VBox>
+				</HBox>
+				<HBox justifyContent="SpaceBetween">
+					<VBox class="sapUiSmallMargin">
+						<Text text="TOTAL COST"/>
+						<Text text="€ XXXXXX" class="titlePlan"/>
+					</VBox>
+					<HBox>
+						<HBox height="3.75em" justifyContent="SpaceAround" alignItems="Center" class="sapUiSmallMarginBeginEnd whiteBackground boxBorder RoundBoxes">
+							<HBox class="sapUiTinyMargin">	
+								<core:Icon visible="{ path: 'PlanModel>/percentage3YearAvg', formatter: 'formatters.Formatter.formatIcon'}" id="trend_down_2" src="sap-icon://trend-down" class="greenArrow"></core:Icon>
+							</HBox>
+							<HBox justifyContent="Center" alignItems="Center" width="3em">
+								<Text text="XX%" class="smallText"/>
+							</HBox>
+							<HBox >
+								<VBox class="sapUiTinyMargin">
+									<Text text="{i18n>lastyear}" class="smallText"/>
+									<Text text="XXX" class="totalCost2"/>
+								</VBox>
+							</HBox>
+						</HBox>
+						
+						<HBox height="3.75em" justifyContent="SpaceAround" alignItems="Center" class="sapUiSmallMarginEnd whiteBackground boxBorder RoundBoxes">
+							<HBox class="sapUiTinyMargin">	
+								<core:Icon visible="true" src="sap-icon://trend-down" class="greenArrow"></core:Icon>
+							</HBox>
+							<HBox justifyContent="Center" alignItems="Center" width="3em">
+								<Text text="XX%" class="smallText"/>
+							</HBox>
+							<HBox>
+								<VBox class="sapUiTinyMargin">
+									<Text text="{i18n>3yearavg}" class="smallText"/>
+									<Text text="XXX" class="totalCost2"/>
+								</VBox>
+							</HBox>
+						</HBox>
+					</HBox>
+				</HBox>
+				<HBox class="greyBackground headerBorder" alignItems="Center" justifyContent="SpaceBetween">
+					
+					<VBox class="sapUiSmallMargin"> 
+						<HBox height="9rem" width="15rem" alignItems="Center" class="boxBorder sapUiSmallMarginBottom whiteBackground">
+							<HBox alignItems="Center" justifyContent="Center">
+								<core:Icon visible="true" src="sap-icon://competitor" class="greenArrow sapUiMediumMargin"></core:Icon>
+								<VBox>
+									<Text text="Top Material" class="smallText"/>
+									<Text text="Material XYZ" class="smallText"/>
+									<Text text="€ 2144" class="smallText"/>
+								</VBox>	
+							</HBox>
+						</HBox>
+						
+						<HBox height="9rem"  width="15rem" alignItems="Center" class="boxBorder whiteBackground">
+							<core:Icon visible="true" src="sap-icon://business-objects-experience" class="greenArrow sapUiMediumMargin"></core:Icon>
+							<VBox>
+								<Text text="Top Material" class="smallText"/>
+								<Text text="Material XYZ" class="smallText"/>
+								<Text text="€ 2144" class="smallText"/>
+							</VBox>
+						</HBox>
+					</VBox>
+					<VBox height="19rem" width="45rem" class="boxBorder sapUiSmallMargin whiteBackground">
+						
+					</VBox>
+				</HBox>
+				
+				<HBox height="10%" justifyContent="End" alignItems="Center" > 
+					<Button press="onViewPlan"  class="BlueButton sapUiSmallMargin" text="View Plan"></Button>
+				</HBox>
+			</VBox>
+			
+			<Button press="onRight" class="sapUiTinyMarginBeginEnd roundButton" icon="sap-icon://navigation-right-arrow"></Button>
+		</HBox>
+		
+		<!-- TileContainer -->
+		<TileContainer 
+			height="80%" 
+			id="tileContainer" 
+			class="tileCont" 
+			visible="false" 
+			tileDelete="handleTileDelete">
+		</TileContainer>
+		<HBox  height="80%" alignItems="Center" justifyContent="Center" visible="false" >
+			<Text text="{i18n>noData}" class="noPlans" id="noDataMsg" />
+		</HBox>
+	</Page>
+</mvc:View>

@@ -1,0 +1,653 @@
+/**************************************/
+/* Universal Shell */
+/**************************************/
+.sapMShellBrandingBar {
+	/* Remove the top blue line */
+    height: 0px;
+}
+.sapMPanelContent {
+    padding: 0rem;
+}
+
+
+/**************************************/
+/* PlanList */
+/**************************************/
+.noPlans {
+	font-size: 1rem;
+}
+
+
+.sapMTC .sapMTCPager SPAN.sapMTCActive {
+    background-color: #01a770;
+}
+
+.sapMTC .sapMTCScroller .sapMTCInner {
+    background-color: #01a770;
+}
+
+
+.tileStyle .sapMStdTileIconDiv {
+	color: #01a770;
+}
+
+.tileCont .sapMStdTileTitle {
+    color: #000000;
+}
+
+.tileCont .sapMStdTileNum, .sapMStdTileNumM, .sapMStdTileNumS {
+    color: #000000;
+}
+.tileCont .sapMStdTileTitle {
+    font-weight: bold;
+    color: #000000;
+}
+
+.tileCont .sapMStdTileNum {
+    font-size: 1.5rem;
+}
+
+.tileCont .sapMStdTileTitle {
+    font-weight: bold;
+    color: #000000;
+    font-size: 16px;
+}
+
+.userName {
+    color: white;
+}
+
+.sapMTile *:active {
+    /* Tile Background Color when pressed */
+    background-color: #cccecd !important;
+}
+
+
+.BlueButton .sapMBtnInner {
+    background-color: #53a5e1;
+    font-size: 0.75rem;
+    font-style:bold;
+     width: 7rem;
+    border: 1px solid;
+    border-radius: 0.2rem;
+    border-color: #c5c5c5;
+    color: white;
+
+}
+.BlueButton .sapMBtnInner:hover {
+
+    background-color: #53a5e1 ;
+    border: 1px solid #c5c5c5;
+    border-radius: 0.2rem;
+    color: white;
+
+
+}
+
+.BlueButton .sapMBtnInner:active {
+    background-color: #e6e6e6 ;
+    border: 1px solid #c5c5c5;
+    color: #000000;
+}
+/**************************************/
+/* Logo configurations  */
+/**************************************/
+.xs_acclogo {
+	/* ACN Logo from the header */
+    max-height: 2em;
+}
+.m_acclogo {
+	/* ACN logo from the NewPlan creator */
+    max-height: 3.5em;
+}
+
+/**************************************/
+/* Header Fragment  */
+/**************************************/
+.logButton.sapMBtn {
+	/* RoundButton center position */
+    height: 3rem !important;
+}
+
+.logButton .sapMBtnInner {
+    border-radius: 50%;
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    max-height: 35px;
+    max-width: 35px;
+    justifyContent: center;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    border-color: white;
+}
+
+.logButton .sapMBtnIcon {
+	 color: #01a770;
+}
+
+.logButton .sapMBtnInner:active {
+	border-color: white;
+    background-color: white;
+}
+
+.userLogo.sapMBtn {
+	/* RoundButton center position */
+    height: 3rem !important;
+}
+
+.userLogo .sapMBtnInner {
+    border-radius: 50%;
+    background-color: #01a770;
+    border-color: white;
+    color: white;
+    height: 35px;
+    width: 35px;
+    max-height: 35px;
+    max-width: 35px;
+    justifyContent: center;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.userLogo .sapMBtnIcon {
+    color: white !important;
+}
+
+.userLogo .sapMBtnInner:active {
+	border-color: white;
+    background-color: #01a770;
+}
+
+
+/**************************************/
+/* Circular Nav back button  */
+/**************************************/
+.roundButton.sapMBtn {
+	/* RoundButton center position */
+    height: 3rem !important;
+}
+
+.roundButton .sapMBtnIcon {
+	 color: #01a770;
+}
+
+.roundButton .sapMBtnInner {
+    border-radius: 50%;
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    max-height: 35px;
+    max-width: 35px;
+    justifyContent: center;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    border-color: #01a770;
+    border-width: 2.5px;
+    
+}
+
+.roundButton .sapMBtnInner:active {
+	border-color: #01a770;
+    background-color: #01a770 !important;
+}
+
+/**************************************/
+/* NewPlanView */
+/**************************************/
+.shadow {
+	/* Shadow of the white box */
+	box-shadow: 0px 0px 20px 2px #006543;
+}
+
+.newPlanWhiteBox {
+	/* White box */
+    border-radius: 12px;
+    background-color: white;
+    width: 40%;
+}
+
+.logo {
+	/* ICON logo */
+    color: #01a770;
+    font-size: 7rem;
+}
+
+.mainMessage {
+	/* Main message text */
+    color: black;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.CreateButton .sapMBtnInner {
+    /* Create Plan Button */
+    background-color: #01a770;
+    height: 150%;
+    border: 1px solid #ababab;
+    border-radius: 0.2rem;
+    border-color: #01a770;
+    color: #ffffff;
+    padding: 7px;
+    width: 10rem;
+}
+
+.CreateButton .sapMBtnInner:hover {
+	/* Create Plan Button */
+    background-color: #02895c !important;
+    border-color: #01a770;
+}
+
+.CreateButton .sapMBtnInner:active {
+	/* Create Plan Button */
+    background-color: #0cb27b !important;
+    border-color: #01a770;
+}
+
+.inputTextNP .sapMInputBaseInner{
+	/* Input Fields Text */
+    width: 100%;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    height: 2rem !important;
+}
+
+.sapUiSizeCompact .sapMInputValHelp>.sapMInputValHelpInner {
+	/* Input text bold */
+    line-height: 1.75rem;
+    height: 1.9rem;
+}
+
+.sapUiCalHead>.sapUiCalHeadB,
+.sapUiCalCancel,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:hover,
+html.sap-desktop .sapUiCalHead>.sapUiCalHeadB:focus {
+	/* Datepicker color */
+    color: #666666 !important;
+}
+
+/**************************************/
+/* Detailed Plan View */
+/**************************************/
+.tableSpacer {
+	padding-left: 2rem;
+}
+
+.InputField .sapMInputBaseInner{
+	/* Input Fields Text */
+    border-radius: 0.2rem;
+}
+
+.InputField .sapMInputBaseInner:hover{
+	/* Input Fields Text */
+    border-color: gray !important;
+}
+
+:not(.sapMSFDisabled)>.sapMSFF:hover {
+    border-color: #01a770;
+}
+
+.Dropdown.sapMSltPressed:not(.sapMSltDisabled):not(.sapMSltState) {
+	/* Dropdown styler */
+    border-color:  gray;
+}
+.Dropdown.sapMSltPressed>.sapMSltArrow{
+	/* Dropdown styler */
+    background: #01a770;
+}
+.Dropdown:not(.sapMSFDisabled)>.sapMSFF:hover {
+	/* Dropdown styler */
+    border-color: gray;
+}
+.sapMSFF>.sapMSFB:not(.sapMSFBF):active, .sapMSFF>.sapMSFB.sapMSFBA {
+    background-color: #01a770;
+    color: #ffffff;
+}
+.Dropdown.sapMSelectListItemBaseSelected {
+	/* Dropdown styler */
+    background: #e8e8e8;
+}
+.Dropdown.sapMSelectListItemBaseSelected:active {
+	/* Dropdown styler */
+    background: #e8e8e8;
+}
+
+.sapMSelectListItemBaseSelected.sapMSelectListItemBaseHoverable:hover {
+	/* DropDown field */
+    background-color: #cdcdcd;
+}
+.sapMSelectListItemBaseSelected {
+	/* DropDown field */
+    background: #bfbfbf;
+}
+
+.sapMSFF:hover {
+    border-color: gray !important;
+}
+
+.headerBorder {
+	/* Border on page header shadows*/
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #e6e6e6;
+	border-bottom-color: #e6e6e6;
+	border-width: 0.1em;
+}
+
+.boxBorder {
+	/* Border on page header*/
+	border-style: solid;
+	border-color: #e6e6e6;
+	border-width: 0.1em;
+}
+
+.whiteBackground {
+    background-color: white;
+}
+
+.greenBackground {
+    background-color: #01a770;
+}
+
+.greyBackground {
+    background-color: #f7f7f7;
+}
+
+.barra.sapContrast.sapMIBar.sapMFooter-CTX {
+    background-color: #01a770;
+}
+
+.titlePlan {
+    color: black;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.smallText {
+    color: black;
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.totalCost {
+	color:black;
+	font-size: 1.30rem;
+	font-weight:bold;
+}
+
+.totalCost2 {
+	color:black;
+	font-size: 1.083rem;
+	font-weight:bold;
+	decimals: 2;
+}
+
+.totalCost {
+    color: black;
+    font-size: 1,583rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* CSS related to the table ~~~~~~ */
+
+tr[data-customStyle="Material"] .sapUiTableTreeIcon,
+tr[data-customStyle="Material"] .sapUiTableTreeIcon::before {
+	/* Material Rows */
+	 visibility: hidden;
+}
+
+tr[data-customStyle="Material"] .sapMText {
+	font-size: 0.75rem;
+}
+
+/* Material Group Rows specific style  */
+tr[data-customStyle="MaterialGroup"]{	
+	background-color: rgb(242,242,242);
+	/*height: 2.6rem !important;*/
+}
+
+
+tr[data-customStyle="MaterialGroup"] td {	
+	border-right-style: none !important;
+	border-left-style: none !important;
+}
+
+
+tr[data-customStyle="MaterialGroup"] .sapMText {
+	/*font-size: 0.9167rem;*/
+}
+
+
+.sapUiTableColRsz {
+	/*Class that will not let the columns´ width be editable*/
+    display: none;
+}
+
+
+
+.sapUiTableGroupIcon.sapUiTableGroupIconClosed::before,
+.sapUiTableTreeIcon.sapUiTableTreeIconNodeClosed::before {
+	/*MaterialGroup dropdown arrow color*/
+    content: '\e066';
+    color: #01a770;
+}
+
+
+/*MaterialGroup dropdown arrow color*/
+.sapUiTableGroupIcon::before,
+.sapUiTableTreeIcon::before {
+    color: #01a770;
+}
+
+.sapUiSizeCompact .sapUiTableCell .sapMLabel,
+.sapUiSizeCondensed .sapUiTableCell .sapMLabel,
+.sapUiSizeCompact .sapUiTableColCell>.sapMLabel,
+.sapUiSizeCondensed .sapUiTableColCell>.sapMLabel {
+	/* Table Header Font size */
+	font-weight: normal;
+    font-size: 0.75rem;
+}
+
+.sapUiTableTreeMode .sapUiTableTreeIcon, .sapUiTableTreeMode .sapUiTableTreeIcon::before {
+	/* Dropdown on the group material, after pressed*/
+    color: green;
+}
+/* ~ End of TreeTable CSS~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+.Dropdown label,
+.sapMSelectList li{
+	/* Dropdown Font sizes */
+	font-size: 0.75rem !important;
+}
+.Dropdown:hover {
+	/* Dropdown border color */
+	border-color: gray !important;
+}
+
+html.sap-desktop .sapContrast .sapMIBar.sapMFooter-CTX,
+html.sap-desktop .sapContrast.sapMIBar.sapMFooter-CTX {
+    /* Footer Green*/
+    border: hidden;
+    background-color: #01a770!important;
+}
+
+.sapMSFB {
+    /*Search Bar */
+    color: #01a770;
+}
+
+.greenArrow {
+    /* Green Arrow Down */
+    color: #01a770;
+    font-size: 25px;
+}
+
+.redArrow {
+    /* Red Arrow Up */
+    color: red;
+    font-size: 25px;
+}
+
+.black {
+    /* Black Arrow */
+    color: black;
+    font-size: 25px;
+}
+
+.sapContrast.sapMIBar-CTX .sapMBtnInner,
+.sapContrast .sapMIBar-CTX .sapMBtnInner {
+    color: #ffffff;
+}
+
+.Dropdown .sapMComboBoxTextFieldArrow {
+    color: #01a770;
+    width: 2.5rem;
+    line-height: 2.375rem;
+}
+
+.sapMInputValHelpInner {
+    speak: none;
+    color: #01a770;
+}
+
+.onLeftBT .sapMBtnInner {
+    background-color: #01a770 !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0.2rem;
+    font-color: #f7f7f7;
+    width: 100px;
+     text-shadow: none !important;
+}
+
+.onLeftBT .sapMBtnInner:hover {
+    background-color: white !important;
+    color: #01a770 !important;
+}
+
+/*
+.onSave .sapMBtnInner:active {
+    background-color: #f7f7f7;
+    font-color: #f7f7f7 !important;
+    color: white !important;
+}*/
+
+.onRightBT .sapMBtnInner {
+    background-color: white !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0.2rem;
+    font-color: #f7f7f7 !important;
+    width: 100px;
+    color: #01a770 !important;
+    text-shadow: none !important;
+}
+.onRightBT .sapMBtnInner:hover {
+    background-color: #01a770 !important;
+    color: white !important;
+}
+
+.BWButton .sapMBtnInner {
+    background-color: white;
+    font-size: 0.75rem;
+    font-style:bold;
+    border: 1px solid;
+    border-radius: 0.2rem;
+    border-color: #c5c5c5;
+    color: #000000;
+
+}
+.BWButton .sapMBtnInner:hover {
+
+    background-color: #e6e6e6 ;
+    border: 1px solid #c5c5c5;
+    border-radius: 0.2rem;
+    color: #000000;
+
+}
+
+.BWButton .sapMBtnInner:active {
+
+    background-color: #e6e6e6 ;
+    border: 1px solid #c5c5c5;
+    color: #000000;
+
+}
+
+/*ComboBox arrow color*/
+.sapMSltArrow::before {
+    font-family: "SAP-icons";
+    speak: none;
+    content: "\e1ef";
+    color: #01a770;
+}
+
+
+
+
+.RoundBoxes {
+	/*round dropdown boxes*/
+    border-radius: 0.2rem;
+}
+
+
+
+.sapMSFF {
+	/*round search box */
+    border-radius: 0.2rem;
+}
+
+.backgroundGroupMaterial {
+    background-color: gray;
+}
+
+.backgroundMaterial {
+    background-color: transparent;
+}
+
+
+/**************************************/
+/* Add Material View */
+/**************************************/
+.borderColor{
+	border-color: transparent !important;
+}
+.verticalGap {
+    align-items: center;
+}
+
+.vbox1Gap {
+    justify-content: flex-end;
+}
+
+.AMArrow .sapMBtnInner {
+    background-color: #01a770;
+    border-radius: 0.2rem;
+    color: #ffffff;
+}
+
+.AMArrow .sapMBtnInner {
+    background-color: #01a770;
+    border-radius: 0.2rem;
+    color: #ffffff;
+}
+
+.AMArrow .sapMBtnInner:hover {
+    background-color: #02895c !important;
+}
+
+.AMArrow .sapMBtnInner:active {
+    background-color: #0cb27b !important;
+}
+
+.AMArrow .sapMBtnIcon {
+    color: #ffffff;
+}
